@@ -1,0 +1,242 @@
+@font-face {
+    font-family: skinny;
+    src: url(../fonts/MySkinnyType-Medium.ttf);
+}
+
+body {
+    font-family: skinny;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    margin: 0;
+    color: rgb(186, 193, 200);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5px;
+}
+
+h2 {
+    font-size: 2em
+}
+
+label {
+    font-size: 1.2em;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    gap: 45px;
+
+}
+
+input {
+    border-radius: 20px;
+    padding-left: 5px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.549);
+    color: rgb(186, 193, 200);
+}
+
+
+#formNewUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.article {
+    background-color: rgba(0, 0, 0, 0.419);
+    border-radius: 20px;
+    box-shadow: 0px 0 20px 5px black;
+    ;
+}
+
+#create {
+    width: 400px;
+    padding-bottom: 30px;
+}
+
+#list {
+    width: 850px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+
+
+.list {
+    width: 80px;
+    text-align: center;
+}
+
+.email {
+    width: 200px;
+    text-align: center;
+}
+table {
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    row-gap:20px;
+}
+
+th {
+    font-size: 1.7em;
+    border-right: 2px solid rgb(186, 193, 200);
+    border-bottom:2px solid rgb(186, 193, 200) ;
+    padding: 0 20px 0 20px;
+}
+td { 
+    font-size: 1.3em;
+    border-bottom:2px solid rgb(186, 193, 200) ;
+    border-collapse: collapse;
+    padding: 10px 25px 0 25px;
+}
+.action {
+    border-right:none;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 48.4px;
+}
+
+.error {
+    width: 200px;
+    height: 20px;
+    margin: 0;
+    color:red;
+}
+.errorModification {
+    font-size: 1.3em;
+    width: 850px;
+    height: 20px;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color:red;
+}
+
+#delete {
+   
+    width:35px;
+    height:35px;
+}
+#modify {
+   
+    width:30px;
+    height:30px;
+}
+
+#valider {
+    width : 30px;
+    height:30px;
+}
+
+.action_button {
+    background-color: transparent;
+    border:none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.valider {
+    width: 50px;
+    text-align: center;
+}
+/* animation button create */
+.glow-on-hover {
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* fin animation button create */
+
+@media (max-width :1410px) {
+    body {
+        background-repeat:repeat;
+    }
+}
+
+@media (max-width :1340px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
